@@ -3,10 +3,11 @@
 		<AssemblyName>BloomFilter</AssemblyName>
 		<AssemblyTitle>BloomFilter</AssemblyTitle>
 		<PackageId>BloomFilter.NetCore</PackageId>
-		<TargetFrameworks>net462;netstandard2.0;net5.0;net6.0</TargetFrameworks>
+		<TargetFrameworks>net462;netstandard2.0;net5.0</TargetFrameworks>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<NoWarn>$(NoWarn);CS1591</NoWarn>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
 		<DefineConstants>$(DefineConstants);NET462;NETFRAMEWORK;</DefineConstants>
@@ -16,9 +17,6 @@
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
 		<DefineConstants>$(DefineConstants);NETCORE;NET5_0;NET5_0_OR_GREATER</DefineConstants>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
-		<DefineConstants>$(DefineConstants);NETCORE;NET6_0;NET6_0_OR_GREATER</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net462' ">
